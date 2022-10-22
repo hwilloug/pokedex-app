@@ -9,23 +9,40 @@ function App() {
     description: 'loading...'
   }]);
 
+  const [search, setSearch] = useState('')
+
   useEffect(() => {
     axios.get('/pokedex').then(resp => {
       setDex(resp.data)
     })
   }, [])
 
+  function handleSearchChange(evt) {
+    setSearch(evt.target.value)
+    axios.get(`/pokedex?name=${evt.target.value}`).then(resp => {
+      setDex(resp.data)
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <div>
+      <div id="search-container">
+        <input
+          id="search-box"
+          placeholder='Search'
+          value={search}
+          onChange={handleSearchChange}
+        />
+      </div>
+      <div id="dex-container">
         <table id="dex">
           <thead>
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Description</th>
+              <th>Classification</th>
               <th>Type 1</th>
               <th>Type 2</th>
             </tr>
@@ -36,8 +53,8 @@ function App() {
               <td>{pokemon.pokedex_number}</td>
               <td>{pokemon.name}</td>
               <td>{pokemon.description}</td>
-              <td class={pokemon.type_1}>{pokemon.type_1}</td>
-              <td class={pokemon.type_2}>{pokemon.type_2}</td>
+              <td><p className={pokemon.type_1}>{pokemon.type_1}</p></td>
+              <td><p className={pokemon.type_2}>{pokemon.type_2}</p></td>
             </tr>
           ))}
           </tbody>

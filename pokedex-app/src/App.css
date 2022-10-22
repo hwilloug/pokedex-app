@@ -1,7 +1,11 @@
 body {
   font-family: 'Helvetica';
-  text-align: center;
   background-color: AliceBlue;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
 }
 
 #dex {
@@ -24,18 +28,105 @@ body {
   background-color: lightgrey;
 }
 
+#search-box {
+  padding: 5px;
+  margin: 10px;
+}
+
+
+
 .Grass {
-  color: green;
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
 }
 .Fire {
-  color: Crimson;
+  background-color: Crimson;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
 }
 .Poison {
-  color: Purple;
+  background-color: Purple;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
 }
 .Water {
-  color: DodgerBlue;
+  background-color: DodgerBlue;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
 }
 .Flying {
-  color: Thistle;
+  background-color: Thistle;
+  border-radius: 5px;
+  padding: 5px;
+}
+.Normal {
+  background-color: rgb(216, 198, 191);
+  border-radius: 5px;
+  padding: 5px;
+}
+.Bug {
+  background-color: rgb(115, 139, 51);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+.Electric {
+  background-color: rgb(255, 226, 10);
+  border-radius: 5px;
+  padding: 5px;
+}
+.Ground {
+  background-color: rgb(149, 89, 0);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+.Fairy {
+  background-color: rgb(252, 128, 252);
+  border-radius: 5px;
+  padding: 5px;
+}
+.Fighting {
+  background-color: rgb(152, 0, 0);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+.Psychic {
+  background-color: rgb(208, 0, 194);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+.Rock {
+  background-color: rgb(184, 132, 87);
+  border-radius: 5px;
+  padding: 5px;
+}
+.Steel {
+  background-color: rgb(160, 160, 160);
+  border-radius: 5px;
+  padding: 5px;
+}
+.Ice {
+  background-color: rgb(171, 216, 255);;
+  border-radius: 5px;
+  padding: 5px;
+}
+.Ghost {
+  background-color: rgb(97, 0, 208);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+.Dragon {
+  background-color: rgb(19, 0, 189);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
 }
